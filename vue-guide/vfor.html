@@ -1,0 +1,22 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="vif.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app-4">
+		  <ol>
+			<li v-for="todo in todos">
+			  {{ todo.text }}
+			</li>
+		  </ol>
+		</div>
+
+        <script src="vfor.js"></script>
+    </body>
+</html>
+
+<!--
+v-for 指令可以绑定数组的数据来渲染一个项目列表
+-->

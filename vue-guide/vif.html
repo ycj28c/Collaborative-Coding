@@ -1,0 +1,30 @@
+<html>
+    <head>
+		<link rel="stylesheet" href="vif.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app">
+			<!--button必须写在app作用域里面-->
+			<button v-on:click="seen = !seen">
+				Toggle
+			</button>
+			<!--
+			transition相当于1个css特效
+			https://cn.vuejs.org/v2/guide/transitions.html
+			-->
+			<transition name="fade">
+				<span v-if="seen">Now you see me</span>
+			</transition>
+        </div>
+		
+		
+            
+        <script src="vif.js"></script>
+    </body>
+</html>
+
+<!--
+这个例子演示了我们不仅可以把数据绑定到 DOM 文本或特性，还可以绑定到 DOM 结构。此外，Vue 也提供一个强大的过渡效果系统，可以在 Vue 插入/更新/移除元素时自动应用过渡效果。
+-->
