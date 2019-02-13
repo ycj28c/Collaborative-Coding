@@ -1,0 +1,1 @@
+learn the vue2 guide at https://cn.vuejs.org/v2/guide/index.html

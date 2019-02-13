@@ -22,9 +22,22 @@
 				  v-bind:key="item.id"
 				></todo-item>
 			</ol>
-            
+            <!--
+			经过渲染后变成
+			<ol>
+                <li>This is a todo</li>
+            </ol>
+			<ol>
+				<li>蔬菜</li>
+				<li>奶酪</li>
+				<li>随便其它什么人吃的东西</i>
+			</ol>
+			-->
         </div>
 				
         <script src="template.js"></script>
     </body>
 </html>
+<!--
+Web Components 规范已经完成并通过，但未被所有浏览器原生实现。目前 Safari 10.1+、Chrome 54+ 和 Firefox 63+ 原生支持 Web Components。
+-->

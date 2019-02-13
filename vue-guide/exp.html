@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+        <div id="app">
+		  <p>{{ number + 1 }}</p>
+		  <p>{{ ok ? 'YES' : 'NO' }}</p>
+		  <p>{{ message.split('').reverse().join('') }}</p>
+		  <div v-bind:id="'list-' + id">bid</div>
+		</div>
+        <script src="exp.js"></script>
+    </body>
+</html>
+
+<!--
+对于所有的数据绑定，Vue.js 都提供了完全的 JavaScript 表达式支持。
+-->

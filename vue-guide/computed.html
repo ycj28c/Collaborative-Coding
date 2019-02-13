@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+		<div id="example">
+		  <p>Original message: "{{ message }}"</p>
+		  <!--从computed直接取属性-->
+		  <p>Computed reversed message: "{{ reversedMessage }}"</p>
+		  <!--另外一种取法，从Methods里头取-->
+		  <p>Computed reversed message: "{{ reversedMessageMd() }}"</p>
+		  <p>Time: "{{ now }}"</p>
+		</div>
+
+        <script src="computed.js"></script>
+    </body>
+</html>
+
+<!--
+对于任何复杂逻辑，你都应当使用计算属性。
+-->

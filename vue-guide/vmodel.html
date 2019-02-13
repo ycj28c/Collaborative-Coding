@@ -6,6 +6,8 @@
         
 		<div id="app-6">
 		  <p>{{ msg }}</p>
+		  <!--用v-once只会初始化数据一次-->
+		  <p v-once>{{ msg }}</p>
 		  <input v-model="msg">
 		</div>
 
