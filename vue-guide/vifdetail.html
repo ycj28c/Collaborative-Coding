@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+		<div id="app">
+			<h1 v-if="ok">Yes</h1>
+			<h1 v-else>No</h1>
+			<!--
+			因为 v-if 是一个指令，所以必须将它添加到一个元素上。但是如果想切换多个元素呢？此时可以把一个 <template> 元素当做不可见的包裹元素，并在上面使用 v-if。最终的渲染结果将不包含 <template> 元素。	
+			-->
+			<template v-if="ok">
+			  <h1>Title</h1>
+			  <p>Paragraph 1</p>
+			  <p>Paragraph 2</p>
+			</template>
+			
+			<div v-if="Math.random() > 0.5">
+			  Now you see me
+			</div>
+			<!--v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。-->
+			<div v-else>
+			  Now you don't
+			</div>
+			
+			<div v-if="type === 'A'">
+			  A
+			</div>
+			<!--v-else-if，顾名思义，充当 v-if 的“else-if 块”，可以连续使用：-->
+			<div v-else-if="type === 'B'">
+			  B
+			</div>
+			<div v-else-if="type === 'C'">
+			  C
+			</div>
+			<div v-else>
+			  Not A/B/C
+			</div>
+			
+			<!--
+			Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从头开始渲染。这么做除了使 Vue 变得非常快之外，还有其它一些好处。例如，如果你允许用户在不同的登录方式之间切换
+			-->
+			<div>
+				<template v-if="loginType === 'username'">
+				  <label>Username</label>
+				  <input placeholder="Enter your username">
+				</template>
+				<template v-else>
+				  <label>Email</label>
+				  <input placeholder="Enter your email address">
+				</template>
+				<!--
+				那么在上面的代码中切换 loginType 将不会清除用户已经输入的内容。因为两个模板使用了相同的元素，<input> 不会被替换掉——仅仅是替换了它的 placeholder
+				-->
+				<button v-on:click="toggleLoginType">Toggle login type</button>
+			</div>
+			
+			<div>
+				<template v-if="loginType === 'username'">
+				  <label>Username</label>
+				  <input placeholder="Enter your username" key="username-input">
+				</template>
+				<template v-else>
+				  <label>Email</label>
+				  <input placeholder="Enter your email address" key="email-input">
+				</template>
+				<!--
+				Vue为你提供了一种方式来表达“这两个元素是完全独立的，不要复用它们”。只需添加一个具有唯一值的 key 属性即可：
+				现在，每次切换时，输入框都将被重新渲染
+				-->
+			<button v-on:click="toggleLoginType">Toggle login type</button>
+			</div>
+		</div>
+		
+        <script src="vifdetail.js"></script>
+    </body>
+</html>
+

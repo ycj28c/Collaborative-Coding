@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+		<div id="app">
+			<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">bind style</div>
+			<div v-bind:style="styleObject">bind style object</div>
+			<!--
+			v-bind:style 的数组语法可以将多个样式对象应用到同一个元素上
+			<div v-bind:style="[baseStyles, overridingStyles]">bind style array</div>
+			-->
+		</div>
+		
+        <script src="vbindstyle.js"></script>
+    </body>
+</html>
+
+<!--
+v-bind:style 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS 属性名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用单引号括起来) 来命名：
+-->

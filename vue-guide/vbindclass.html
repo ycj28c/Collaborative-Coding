@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        
+		<div id="app">
+			<div v-bind:class="{ active: isActive }">基本class绑定</div>
+			
+			<div
+			  class="static"
+			  v-bind:class="{ active: isActive, 'text-danger': hasError }"
+			>绑定data</div>
+			<!--
+			结果渲染为<div class="static active"></div>
+			这里的isActive和hasError就是用来表示active或者text-danger的class是否应用
+			-->
+			
+			<div v-bind:class="classObject">绑定data模版</div>
+			<!--直接使用类似css模版的data-->
+			
+			<div v-bind:class="classComputed">绑定computed</div>
+			<!--我们也可以在这里绑定一个返回对象的计算属性。这是一个常用且强大的模式-->
+			
+			<div v-bind:class="[activeClass, errorClass]">绑定数组class</div>
+			<!--
+			渲染为<div class="active text-danger"></div>
+			-->
+			
+			<div v-bind:class="[isActive ? activeClass : '', errorClass]">三元表达式</div>
+			
+		</div>
+		
+        <script src="vbindclass.js"></script>
+    </body>
+</html>
+
+<!--
+操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 v-bind 处理它们：只需要通过表达式计算出字符串结果即可。不过，字符串拼接麻烦且易错。因此，在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。表达式结果的类型除了字符串之外，还可以是对象或数组。
+-->
