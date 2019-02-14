@@ -26,6 +26,10 @@ new Vue({
       firstName: 'John',
       lastName: 'Doe',
       age: 30
-    }
+    },
+	todos: [
+      { isComplete: true },
+      { isComplete: false }
+    ]
   }
 })

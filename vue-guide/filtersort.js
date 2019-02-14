@@ -9,5 +9,12 @@ var vm = new Vue({
         return number % 2 === 0
       })
     }
+  },
+  methods: {
+    even: function (numbers) {
+      return numbers.filter(function (number) {
+        return number % 2 === 0
+      })
+    }
   }
 })

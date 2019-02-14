@@ -6,6 +6,11 @@
         
 		<div id="app">
 			<li v-for="n in evenNumbers">{{ n }}</li>
+			
+			<!--
+			在计算属性不适用的情况下 (例如，在嵌套 v-for 循环中) 你可以使用一个 method 
+			-->
+			<li v-for="n in even(numbers)">{{ n }}</li>
 		</div>
 		
         <script src="filtersort.js"></script>

@@ -12,6 +12,10 @@
 		  -->
 			{{ item.message }}
 		  </li>
+		  
+		  <div>
+		    <span v-for="n in 10">{{ n }} </span>
+		  </div>
 		</ul>
 		
 		<ul id="example-2">
@@ -25,6 +29,14 @@
 		  <div v-for="item in items" :key="item.id">
 			{{ parentMessage }} - {{ item.message }}
 		  </div>
+		  
+		  <!--类似于 v-if，你也可以利用带有 v-for 的 <template> 渲染多个元素-->
+		  <ul>
+			<template v-for="item in items">
+			  <li>{{ item.message }}</li>
+			  <li class="divider" role="presentation"></li>
+			</template>
+		  </ul>
 		</ul>
 		
 		<!--你也可以用 v-for 通过一个对象的属性来迭代-->
@@ -41,6 +53,14 @@
 		  <div v-for="(value, key, index) in object">
 			{{ index }}. {{ key }}: {{ value }}
 	      </div>
+		  
+		  <li v-for="todo in todos" v-if="!todo.isComplete">
+		    {{ todo }}
+		  </li>
+		  <!--
+		  当它们处于同一节点，v-for 的优先级比 v-if 更高，这意味着 v-if 将分别重复运行于每个 v-for 循环中。当你想为仅有的一些项渲染节点时，这种优先级的机制会十分有用，上面的代码只传递了未完成的 todos。
+		  -->
+
 		</ul>
 		
         <script src="vfordetail.js"></script>
