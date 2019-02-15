@@ -1,0 +1,20 @@
+<html>
+    <head>
+		<script src="https://unpkg.com/vue"></script>
+        <!--script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script-->
+    </head>
+    <body>
+       	<!--https://jsfiddle.net/chrisvfritz/sbLgr0ad-->
+		
+		<div id="blog-post-demo" class="demo">
+		  <blog-post
+			v-for="post in posts"
+			v-bind:key="post.id"
+			v-bind:title="post.title"
+		  ></blog-post>
+		</div>
+
+        <script src="getfromapi.js"></script>
+    </body>
+</html>
+
