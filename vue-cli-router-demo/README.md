@@ -31,7 +31,7 @@ npm run build --report
 
 [Vue2.0史上最全入坑教程（下）—— 实战案例](https://www.jianshu.com/p/ec436222c608)
 
-[Vue2.0史上最全入坑教程（完）—— 实战案例](Vue2.0史上最全入坑教程（完）—— 实战案例)
+[Vue2.0史上最全入坑教程（完）—— 实战案例](https://www.jianshu.com/p/7c5ccfac3fa8)
 
 [GitHub Source](https://github.com/datura-lj/vue_cli_demo)
 
