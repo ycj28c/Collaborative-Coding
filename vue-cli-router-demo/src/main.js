@@ -3,11 +3,20 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-//必须安装vue resource，否则会报get错误
-import VueResource from 'vue-resource'
-Vue.use(VueResource)
+import VueAxios from 'vue-axios'
+import axios from 'axios'
+
+//通过use方法加载axios插件
+Vue.use(VueAxios, axios)
+
+// 必须安装vue resource，否则会报get错误
+// import VueResource from 'vue-resource'
+// Vue.use(VueResource)
+// 因为官方已经不推荐使用vue resource了，所以将之替换为axios
 
 Vue.config.productionTip = false
+
+Vue.prototype.$axios = axios
 
 /* eslint-disable no-new */
 new Vue({
