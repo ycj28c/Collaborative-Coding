@@ -5,6 +5,7 @@ var mongoose = require('mongoose'),
   Task = mongoose.model('Tasks');
 
 exports.list_all_tasks = function(req, res) {
+  //这个貌似是mongoose的自己api
   Task.find({}, function(err, task) {
     if (err)
       res.send(err);
