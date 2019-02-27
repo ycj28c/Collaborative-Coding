@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="head">
     <div class="header">
-      <h4 class="header-cont">主页</h4>
+      <h4 class="header-cont">Collaborative Coding</h4>
     </div>
   </div>
 </template>

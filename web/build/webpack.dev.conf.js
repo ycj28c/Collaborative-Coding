@@ -13,8 +13,10 @@ const portfinder = require('portfinder')
 /* datura_lj 增加express 20171126 */
 const express = require('express')
 const app = express()
-var appData = require('../goods.json')//加载本地数据文件
+var appData = require('../jsons/goods.json')//加载本地数据文件
 var goods = appData.goods
+var problemData = require('../jsons/problems.json')
+var problems = problemData.problems
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 /* 增加express end */
@@ -58,6 +60,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         res.json({
           code: 0,
           data: goods
+        })
+      }),
+      app.get('/api/problems', (req, res) => {
+        res.json({
+          code: 0,
+          data: problems
         })
       })
     }

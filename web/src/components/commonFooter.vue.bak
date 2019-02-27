@@ -1,8 +1,10 @@
 <template lang="html">
   <div class="footer">
     <ul class="footer-cont">
-        <li>Copyright © 2019 Ralph Yang</li>
-        <li>Help Center  |  Terms  |  Privacy </li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
     </ul>
   </div>
 </template>
@@ -22,12 +24,11 @@ export default {
   }
   .footer-cont li {
     float: left;
-    width: 50%;
+    width: 25%;
     height: 1.8rem;
     line-height: 1.8rem;
-    /*font-size: 1.4rem;*/
-    font-weight: 300;
-    color: grey;
+    font-size: 1.4rem;
+    color: #ff8000;
     text-align: center;
   }
   .footer-cont li:active {
