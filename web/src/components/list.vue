@@ -5,7 +5,7 @@
           <img :src="img" alt="">
       </div-->
       <td class="problem-list-desc">
-        <router-link to="/detail"  class="problem-list-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
+        <router-link to="/detail/1"  class="problem-list-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
           <p class="problem-list-pid">{{ pid }}</p>
         </router-link>
       </td>
