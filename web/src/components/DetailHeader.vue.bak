@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="head">
     <div class="header">
-      <a href="javascript:;" class="go-back" @click="goBack">Back</a>
-      <h4 class="header-cont">Problem Detail</h4>
+      <a href="javascript:;" class="go-back" @click="goBack">返回</a>
+      <h4 class="header-cont">商品详情页</h4>
     </div>
   </div>
 </template>

@@ -5,17 +5,18 @@
           <img :src="img" alt="">
       </div-->
       <td class="problem-list-desc">
-        <router-link to="/detail/1"  class="problem-list-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
+        <router-link :to="'/detail/'+pid"  class="problem-list-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
           <p class="problem-list-pid">{{ pid }}</p>
         </router-link>
       </td>
       <td class="problem-list-desc">
-        <router-link to="/detail"  class="problem-list-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
+        <!--必须使用：to，直接用to无法使用动态参数 -->
+        <router-link :to="'/detail/'+pid"  class="problem-list-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
           <p class="problem-list-title">{{ title }}</p>  <!-- 这里用到了过滤器货币形式和保留两位小数 -->
         </router-link>
       </td>
       <td class="problem-list-desc">
-        <router-link to="/detail"  class="problem-list-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
+        <router-link :to="'/detail/'+pid"  class="problem-list-link">  <!--  这个是用来跳转页面的，可以理解为a标签 -->
           <p class="problem-list-difficulty">{{ difficulty }}</p>  <!-- 这里用到了过滤器货币形式和保留两位小数 -->
         </router-link>
       </td>

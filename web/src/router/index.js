@@ -27,7 +27,7 @@ const routes = [
   {
     path: '/detail/:pid',
     component: Detail, //这个表示在地址栏输入/detail的时候，在<router-view>显示/pages/goodsDetail页面
-    props: { pid: 2 }
+    //props: { pid: 2 }
   }
 ]
 //一个模块就是一个独立的文件。该文件内部的所有变量，外部无法获取。如果你希望外部能够读取模块内部的某个变量，就必须使用export关键字输出该变量。
