@@ -1,10 +1,8 @@
 <template lang="html">
   <div class="detail">
       <detail-header></detail-header>
-      <p class="site-title">{{problem1.title}}</p>
-      <!--为了能读取json显示换行，json里面必须使用\n，而css样式必须是white-space"pre-->
-      <p style="white-space: pre;" class="site-cont">{{problem1.descriptor}}</p>
-      <textarea class="code-area" placeholder="Enter Code Here"></textarea>
+      <p class="site-title">树懒果园 泰国进口大金煌芒果</p>
+      <p class="site-cont">5斤装，约2-4个果，大！！！甜！！！</p>
       <common-footer></common-footer>
   </div>
 </template>
@@ -19,25 +17,12 @@ import CommonFooter from '../components/commonFooter'
 export default {
   data () {
     return {
-      problem1:[] //这个必须有，如果下面读取了变量，这不是return吗，为啥呢？
+
     }
   },
   components: {
     DetailHeader,
     CommonFooter
-  },
-  created () {   /* 这个是vue的钩子函数，当new Vue()实例创建完毕后执行的函数 */
-      //读取json的例子https://www.jianshu.com/p/eff4eb93c902
-      var vm = this
-      //引入problems json data
-      this.$axios.get('/api/problems/1').then(function (response) {
-        console.log(response.data.data);
-        vm.problem1 = response.data.data;
-        //this.items = response.data.data就编译不过? 这里的this是function里头的this，不一样
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
   }
 }
 </script>
@@ -64,14 +49,5 @@ export default {
   .detail > p.site-cont {
     color: #666;
     font-size: 0.9rem;
-  }
-  .detail > textarea.code-area {
-    border:0;
-    border-radius:5px;
-    background-color:rgba(241,241,241,.98);
-    width: 600px;
-    height: 400px;
-    padding: 10px;
-    resize: none;
   }
 </style>

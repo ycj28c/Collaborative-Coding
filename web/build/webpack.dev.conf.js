@@ -17,6 +17,7 @@ var appData = require('../jsons/goods.json')//加载本地数据文件
 var goods = appData.goods
 var problemData = require('../jsons/problems.json')
 var problems = problemData.problems
+var problem1 = problemData.problems[0]
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 /* 增加express end */
@@ -55,6 +56,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       poll: config.dev.poll,
     },
     /* datura_lj 增加express 20171126 */
+    //因为这个json是测试数据，是提早加载的，所以每次修改json或者webpack.dev.conf.js，都需要重新启动server
     before(app) {
       app.get('/api/goods', (req, res) => {
         res.json({
@@ -66,6 +68,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         res.json({
           code: 0,
           data: problems
+        })
+      }),
+      app.get('/api/problems/1', (req, res) => {
+        res.json({
+          code: 0,
+          data: problem1
         })
       })
     }

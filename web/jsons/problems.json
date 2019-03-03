@@ -1,12 +1,50 @@
 {
-    "problems": [
-        { "id": "1", "title": "Two Sum", "difficulty": "Easy" },
-        { "id": "2", "title": "Add Two Numbers", "difficulty": "Medium" },
-        { "id": "3", "title": "Longest Substring Without Repeating Characters", "difficulty": "Medium" },
-        { "id": "4", "title": "Median of Two Sorted Arrays", "difficulty": "Hard" },
-        { "id": "5", "title": "Longest Palindromic Substring", "difficulty": "Medium" },
-        { "id": "6", "title": "ZigZag Conversion", "difficulty": "Medium" },
-        { "id": "7", "title": "Reverse Integer", "difficulty": "Easy" },
-        { "id": "8", "title": "String to Integer (atoi)", "difficulty": "Medium" }
-    ]
+	"problems": [{
+		"id": "1",
+		"title": "Two Sum",
+		"difficulty": "Easy",
+		"descriptor": "Given an array of integers, return indices of the two numbers such that they add up to a specific target.You may assume that each input would have exactly one solution, and you may not use the same element twice.\nExample:\nGiven nums = [2, 7, 11, 15],\ntarget = 9,\nBecause nums[0] + nums[1] = 2 + 7 = 9,\nreturn [0, 1]."
+	},
+	{
+		"id": "2",
+		"title": "Add Two Numbers",
+		"difficulty": "Medium",
+		"descriptor": "1"
+	},
+	{
+		"id": "3",
+		"title": "Longest Substring Without Repeating Characters",
+		"difficulty": "Medium",
+		"descriptor": "2"
+	},
+	{
+		"id": "4",
+		"title": "Median of Two Sorted Arrays",
+		"difficulty": "Hard",
+		"descriptor": "3"
+	},
+	{
+		"id": "5",
+		"title": "Longest Palindromic Substring",
+		"difficulty": "Medium",
+		"descriptor": "4"
+	},
+	{
+		"id": "6",
+		"title": "ZigZag Conversion",
+		"difficulty": "Medium",
+		"descriptor": "5"
+	},
+	{
+		"id": "7",
+		"title": "Reverse Integer",
+		"difficulty": "Easy",
+		"descriptor": "6"
+	},
+	{
+		"id": "8",
+		"title": "String to Integer (atoi)",
+		"difficulty": "Medium",
+		"descriptor": "7"
+	}]
 }
