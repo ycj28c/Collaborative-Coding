@@ -17,7 +17,7 @@ var appData = require('../jsons/goods.json')//加载本地数据文件
 var goods = appData.goods
 var problemData = require('../jsons/problems.json')
 var problems = problemData.problems
-var problem1 = problemData.problems[0]
+//var problem1 = problemData.problems[0]
 var apiRoutes = express.Router()
 app.use('/api', apiRoutes)
 /* 增加express end */
@@ -70,10 +70,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
           data: problems
         })
       }),
-      app.get('/api/problems/1', (req, res) => {
+      //express写api的例子https://www.ctolib.com/topics-106441.html
+      app.get('/api/problems/:pid', (req, res) => {
         res.json({
           code: 0,
-          data: problem1
+          //注意这个获取变量的方法
+          data: problemData.problems[req.params.pid-1]
         })
       })
     }

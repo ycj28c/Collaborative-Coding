@@ -1,6 +1,9 @@
 <template lang="html">
   <div class="detail">
       <detail-header></detail-header>
+      <!--用以下可以获取router传递过来的值
+      <h3>{{ this.$route.params.pid }}</h3>
+      -->
       <p class="site-title">{{problem1.title}}</p>
       <!--为了能读取json显示换行，json里面必须使用\n，而css样式必须是white-space"pre-->
       <p style="white-space: pre;" class="site-cont">{{problem1.descriptor}}</p>
@@ -29,8 +32,9 @@ export default {
   created () {   /* 这个是vue的钩子函数，当new Vue()实例创建完毕后执行的函数 */
       //读取json的例子https://www.jianshu.com/p/eff4eb93c902
       var vm = this
+      var pid = this.$route.params.pid
       //引入problems json data
-      this.$axios.get('/api/problems/1').then(function (response) {
+      this.$axios.get('/api/problems/'+pid).then(function (response) {
         console.log(response.data.data);
         vm.problem1 = response.data.data;
         //this.items = response.data.data就编译不过? 这里的this是function里头的this，不一样
