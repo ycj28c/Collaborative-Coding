@@ -3,6 +3,11 @@
 安装websocket服务
 -----------------
 npm install ws
+npm install node-uuid
+
+express
+socket.io
+sockjs
 
 启动server.js
 -----------------
