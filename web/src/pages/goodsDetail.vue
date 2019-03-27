@@ -7,7 +7,9 @@
       <p class="site-title">{{problem1.title}}</p>
       <!--为了能读取json显示换行，json里面必须使用\n，而css样式必须是white-space"pre-->
       <p style="white-space: pre;" class="site-cont">{{problem1.descriptor}}</p>
-      <textarea class="code-area" placeholder="Enter Code Here"></textarea>
+      <iframe name="embed_readwrite" src="http://localhost:9001" width=80% height=400></iframe>
+      <!--textarea class="code-area" placeholder="Enter Code Here"></textarea-->
+      <div style="height:100px"></div><!--footer empty space-->
       <common-footer></common-footer>
   </div>
 </template>
